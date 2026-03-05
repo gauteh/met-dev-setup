@@ -2,11 +2,16 @@
 
 sudo apt-get update
 
-sudo apt-get install git build-essential curl zsh wget tmux git
+sudo apt-get install git build-essential curl zsh wget tmux git ripgrep
 
 # rust
 echo "rust."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# some rust pcks
+cargo install --force yazi-build
+cargo install exa
+cargo install zoxide
 
 # mamba / python
 echo "python."
