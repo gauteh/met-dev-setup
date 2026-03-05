@@ -1,0 +1,12 @@
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "bundle/Apprentice"]
+	path = bundle/Apprentice
+	url = https://github.com/romainl/Apprentice
+[submodule "bundle/calendar.vim"]
+	path = bundle/calendar.vim
+	url = https://github.com/itchyny/calendar.vim
+[submodule "bundle/quicktex"]
+	path = bundle/quicktex
+	url = https://github.com/brennier/quicktex

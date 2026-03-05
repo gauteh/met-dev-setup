@@ -1,0 +1,11 @@
+{
+  "diagnostic.messageTarget": "echo",
+  "coc.source.around.enable": false,
+  "coc.source.buffer.enable": false,
+  "coc.preferences.useQuickfixForLocations": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.server.path": "~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rust-analyzer",
+  "python.formatting.provider": "yapf",
+  "python.linting.pylintEnabled": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
+}

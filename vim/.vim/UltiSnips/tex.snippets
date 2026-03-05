@@ -1,0 +1,57 @@
+
+snippet ref "Reference" b
+\ref{${1:ref}}$0
+endsnippet
+
+snippet letter "Letter"
+% Letter class
+\documentclass[a4paper, 10pt]{letter}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+}
+\urlstyle{same}
+
+% Name of sender
+\name{Gaute Hope}
+
+% Signature of sender
+\signature{Gaute Hope}
+
+% Address of sender
+\address
+{
+	Vognstølen 35,
+	5096 Bergen,
+	Norway
+}
+
+
+\begin{document}
+
+% Name and address of receiver
+\begin{letter}
+{
+    Kathleen Kelly,\\
+    The Shop Around The Corner,\\
+    Small Corner, NYC.
+}
+
+% Opening statement
+\opening{Dear ,}
+
+% Letter body
+
+
+% Closing statement
+\closing{Yours truly,}
+
+\end{letter}
+\end{document}
+endsnippet
+

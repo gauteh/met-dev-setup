@@ -1,0 +1,33 @@
+snippet lit "Reference card" b
+==============================================
+${1:Author}, ${2:Year} (${3:Type}) - ${4:Title}
+(pp.: ${5:pages})
+----------------------------------------------
+(Citation key: $1$2) [Tags: ${6}]
+
+Description & claims:
+  * $7
+
+Data:
+  * $8
+
+My notes:
+  * $9
+----------------------------------------------
+endsnippet
+
+## Diary
+snippet dateh "Header Date" b
+# `!v strftime('%Y-%m-%d')`
+endsnippet
+
+snippet diary "Journal entry" b
+# `!v strftime('%Y-%m-%d')`
+
+`!v strftime('%H:%M')`: $1
+endsnippet
+
+snippet jrnl "Journal line" b
+`!v strftime('%H:%M')`: $1
+endsnippet
+

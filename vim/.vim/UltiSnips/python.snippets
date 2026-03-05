@@ -1,0 +1,24 @@
+snippet distance
+from pyproj import Geod
+g = Geod(ellps='WGS84')
+_az12, _az21, dist = g.inv(${1:lon0}, ${2:lat0}, ${3:lon1}, ${4:lat1})
+endsnippet
+
+snippet imlab
+import numpy as np
+import scipy as sc
+import xarray as xr
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+endsnippet
+
+snippet imsfy
+import sfy, sfy.xr
+import sfy.signal as sig
+endsnippet
+
+snippet fontsz
+plt.rcParams.update({'font.size': 14})
+endsnippet
+

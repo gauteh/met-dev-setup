@@ -1,0 +1,12 @@
+*.swp
+*.swo
+*~
+.gmt*
+\#*#
+.~lock.*
+~$*
+tags
+.DS_Store
+__pycache__
+*.pyc
+.gdb_history

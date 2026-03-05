@@ -1,0 +1,11 @@
+name: neovim
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pynvim
+  - toml
+  - yapf
+  - dbus-python
+  - pygobject
+

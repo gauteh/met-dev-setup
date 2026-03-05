@@ -1,0 +1,4 @@
+# Copy commit to clipboard
+bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection clipboard"
+bind refs 1 ?@tmux split-window -d -l 10 "git delete-branch gauteh %(branch)"
+bind refs 2 ?@tmux split-window -d -l 10 "git delete-branch origin %(branch)"
