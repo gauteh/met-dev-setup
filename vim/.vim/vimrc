@@ -746,48 +746,7 @@ map  <C-C> gcc
 vmap <C-C> gc
 " }}}
 " Wiki {{{
-let g:wiki_root = '~/.wiki'
-let g:wiki_filetypes = [ 'md' ]
-let g:wiki_link_target_type = 'wiki'
-let g:wiki_select_method = {
-      \ 'pages': function('wiki#fzf#pages'),
-      \ 'tags': function('wiki#fzf#tags'),
-      \ 'toc': function('wiki#fzf#toc'),
-      \}
-let g:lists_filetypes = ['wiki', 'md']
-let g:lists_todos = [ '[ ]', '[x]' ]
-
-nmap <silent> <leader>dd :WikiJournal<CR>
-nmap <silent> <leader>wf :WikiPages<CR>
 nmap <silent> +t :ListsToggle<CR>
-
-augroup Wiki
-  au!
-  " au FileType vimwiki set concealcursor=nvc " hide links untill editing
-  " au BufEnter ~/.wiki/*.md setl ft=wiki
-
-  " Set up tmux to hide this screen after a while
-  " call system('tmux setw lock-command cat')
-  " call system('tmux setw lock-after-time 60')
-
-  " diary
-  au BufEnter ~/.wiki/*.md nmap <buffer> [d :WikiJournalPrev<CR>
-  au BufEnter ~/.wiki/*.md nmap <buffer> ]d :WikiJournalNext<CR>
-
-  " use openbrowser
-  au BufEnter ~/.wiki/*.md silent! unmap <buffer> gx
-
-  " au FileType wiki nmap <buffer> [d :WikiJournalPrev<CR>
-  " au FileType wiki nmap <buffer> ]d :WikiJournalNext<CR>
-
-  au BufNewFile ~/.wiki/journal/*.md put! =strftime('# %Y-%m-%d') | call append(2, '') | norm G
-
-  " au FileType wiki nmap <buffer> <leader>a :WikiFzfTags<CR>
-  au FileType markdown setl conceallevel=1 tw=80
-
-  au Syntax markdown highlight def link WikiTag Keyword
-  au Syntax markdown syn match WikiTag /\%(^\|\s\)\@<=:\%([^:''[:space:]]\+:\)\+\%(\s\|$\)\@=/
-augroup END
 
 " }}}
 " Speeddating {{{
