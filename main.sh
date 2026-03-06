@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 
-sudo apt-get install git build-essential curl zsh wget tmux git ripgrep stow
+sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow
 
 # rust
 echo "rust."
@@ -38,7 +38,7 @@ nvm install -g @github/copilot
 copilot --allow-all-tools --version
 
 # latex
-sudo apt-get install texlive-latex-extra texlive-latex-recommended
+sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
 
 # set up dev env
 sudo chsh -s /usr/bin/zsh
