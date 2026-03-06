@@ -39,12 +39,12 @@ nvm install -g @github/copilot
 sudo apt-get install texlive-latex-extra texlive-latex-recommended
 
 # set up dev env
-chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh
 
 cd $HOME
 mkdir dev/
 cd dev/
-git clone git@github.com:gauteh/met-dev-setup.git
+git clone https://github.com/gauteh/met-dev-setup.git
 
 alias stow='stow -t ~'
 cd met-dev-setup/
