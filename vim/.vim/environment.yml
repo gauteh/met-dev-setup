@@ -8,4 +8,5 @@ dependencies:
   - yapf
   - dbus-python
   - pygobject
+  - neovim
 

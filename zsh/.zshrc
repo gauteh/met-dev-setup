@@ -72,23 +72,23 @@ if which starship 2>&1 > /dev/null; then
 fi
 
 # conda
-export MAMBA_ROOT_PREFIX="$HOME/.mconda3"
-if [[ -e "$HOME/.mconda3" ]]; then
-  # >>> conda initialize >>>
-  # !! Contents within this block are managed by 'conda init' !!
-  __conda_setup="$('$HOME/.mconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-      eval "$__conda_setup"
-  else
-      if [ -f "$HOME/.mconda3/etc/profile.d/conda.sh" ]; then
-          . "$HOME/.mconda3/etc/profile.d/conda.sh"
-      else
-          export PATH="$HOME/.mconda3/bin:$PATH"
-      fi
-  fi
-  unset __conda_setup
-  # <<< conda initialize <<<
-fi
+# export MAMBA_ROOT_PREFIX="$HOME/.mconda3"
+# if [[ -e "$HOME/.mconda3" ]]; then
+#   # >>> conda initialize >>>
+#   # !! Contents within this block are managed by 'conda init' !!
+#   __conda_setup="$('$HOME/.mconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#   if [ $? -eq 0 ]; then
+#       eval "$__conda_setup"
+#   else
+#       if [ -f "$HOME/.mconda3/etc/profile.d/conda.sh" ]; then
+#           . "$HOME/.mconda3/etc/profile.d/conda.sh"
+#       else
+#           export PATH="$HOME/.mconda3/bin:$PATH"
+#       fi
+#   fi
+#   unset __conda_setup
+#   # <<< conda initialize <<<
+# fi
 
 if [ -f "$HOME/.mconda3/etc/profile.d/mamba.sh" ]; then
     . "$HOME/.mconda3/etc/profile.d/mamba.sh"

@@ -22,9 +22,9 @@ curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.bin/met-dev -y
 # mamba / python
 echo "python."
 wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3.sh -b -p "${HOME}/conda"
+bash Miniforge3.sh -b -p "${HOME}/.mconda3"
 source "${HOME}/conda/etc/profile.d/mamba.sh"
-mamba shell init
+# mamba shell init
 
 # nvm
 echo "install nvm, node"
@@ -45,7 +45,7 @@ copilot --allow-all-tools --version
 sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
 
 # set up dev env
-sudo chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh gauteh
 
 cd $HOME
 # mkdir dev/
@@ -65,3 +65,6 @@ stow yazi
 stow bash
 stow zsh
 
+# set up nvim
+mamba env create -f ~/.vim/environment.yml
+ln -s ~/.mconda3/envs/neovim/bin/nvim ~/.bin/met-dev/
