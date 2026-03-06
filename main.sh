@@ -43,3 +43,17 @@ cd $HOME
 mkdir dev/
 cd dev/
 git clone git@github.com:gauteh/met-dev-setup.git
+
+alias stow='stow -t ~'
+cd met-dev-setup/
+
+stow cargo
+stow direnv
+stow git
+stow starship
+stow tmux
+stow vim
+stow yazi
+stow bash
+stow zsh
+

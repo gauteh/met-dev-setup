@@ -1,0 +1,22 @@
+# NOTE: take care, this one is linked to openbox environment file.
+
+[ -e ~/.bash/functions.sh ] && source ~/.bash/functions.sh
+[ -e /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
+
+## Settings
+export HISTFILESIZE=1000000
+
+## git
+if [[ -e /usr/share/git/completion/git-prompt.sh ]]; then
+  source /usr/share/git/completion/git-prompt.sh
+
+  export GIT_PS1_SHOWDIRTYSTATE=true
+  export GIT_PS1_SHOWSTASHSTATE=true
+  export GIT_PS1_SHOWUNTRACKEDFILES=true
+  export PS1='\[\033[1m\][\h \W]$(__git_ps1 "(%s)") \$ \[\033[0m\]'
+fi
+
+
+# allow any key to unfreeze after C-s
+stty ixany
+
