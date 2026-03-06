@@ -35,6 +35,8 @@ echo "--- node"
 nvm install node
 nvm install -g @github/copilot
 
+copilot --allow-all-tools --version
+
 # latex
 sudo apt-get install texlive-latex-extra texlive-latex-recommended
 
