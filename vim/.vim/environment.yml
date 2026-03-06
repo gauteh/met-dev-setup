@@ -9,4 +9,5 @@ dependencies:
   - dbus-python
   - pygobject
   - neovim
+  - nvim
 

@@ -72,7 +72,7 @@ if which starship 2>&1 > /dev/null; then
 fi
 
 # conda
-# export MAMBA_ROOT_PREFIX="$HOME/.mconda3"
+export MAMBA_ROOT_PREFIX="$HOME/.mconda3"
 # if [[ -e "$HOME/.mconda3" ]]; then
 #   # >>> conda initialize >>>
 #   # !! Contents within this block are managed by 'conda init' !!

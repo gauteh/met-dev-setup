@@ -16,6 +16,7 @@ if which direnv 2>&1 > /dev/null; then
   eval "$(direnv hook bash)"
 fi
 
+export MAMBA_ROOT_PREFIX="$HOME/.mconda3"
 if [[ -e "$HOME/.mconda3" ]]; then
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
