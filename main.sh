@@ -2,7 +2,7 @@
 
 sudo apt-get update
 
-sudo apt-get install git build-essential curl zsh wget tmux git ripgrep
+sudo apt-get install git build-essential curl zsh wget tmux git ripgrep stow
 
 # rust
 echo "rust."
@@ -31,6 +31,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 echo "--- node"
 nvm install node
+nvm instsall -g @github/copilot
 
 # latex
 sudo apt-get install texlive-latex-extra texlive-latex-recommended
+
+# set up dev env
+chsh -s /usr/bin/zsh
+
+cd $HOME
+mkdir dev/
+cd dev/
+git clone git@github.com:gauteh/met-dev-setup.git
