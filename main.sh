@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 
-sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow
+sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv
 
 # rust
 echo "rust."
@@ -14,6 +14,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install --force yazi-build
 cargo install exa
 cargo install zoxide
+
+# starship
+mkdir -p ~/.bin/met-dev
+curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.bin/met-dev -y
 
 # mamba / python
 echo "python."
@@ -44,11 +48,11 @@ sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
 sudo chsh -s /usr/bin/zsh
 
 cd $HOME
-mkdir dev/
-cd dev/
-git clone https://github.com/gauteh/met-dev-setup.git
+# mkdir dev/
+# cd dev/
+# git clone https://github.com/gauteh/met-dev-setup.git
 
-alias stow='stow -t ~'
+alias stow='stow -t /home/gauteh'
 cd met-dev-setup/
 
 stow cargo
