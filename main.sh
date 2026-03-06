@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 sudo apt-get update
 
 sudo apt-get install git build-essential curl zsh wget tmux git ripgrep stow
@@ -31,7 +33,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 echo "--- node"
 nvm install node
-nvm instsall -g @github/copilot
+nvm install -g @github/copilot
 
 # latex
 sudo apt-get install texlive-latex-extra texlive-latex-recommended
