@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 
-sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv
+sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv exa zoxide
 
 # rust
 echo "rust."
@@ -12,8 +12,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # some rust pcks
 cargo install --force yazi-build
-cargo install exa
-cargo install zoxide
+# cargo install exa
+# cargo install zoxide
 
 # starship
 mkdir -p ~/.bin/met-dev
