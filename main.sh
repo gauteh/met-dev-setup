@@ -98,3 +98,7 @@ cd ~
 
 # current repos
 mkdir dev
+cd dev
+
+git clone https://github.com/gauteh/max-m10s-rs.git
+git clone https://github.com/gauteh/sfy.git
