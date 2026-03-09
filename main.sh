@@ -91,5 +91,10 @@ stow yazi
 stow bash
 stow zsh
 
+cd ~
+
 # set up vim
 ~/.mconda3/envs/neovim/bin/nvim -c ':PlugUpdate' -c ':MasonInstall rust-analyzer basedpyright'a -c ':qa'
+
+# current repos
+mkdir dev
