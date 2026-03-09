@@ -1,0 +1,5 @@
+auto_activate_base: true
+anaconda_upload: false
+channels:
+  - conda-forge
+changeps1: false

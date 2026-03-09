@@ -81,6 +81,7 @@ fi
 alias stow='stow -t /home/gauteh'
 cd met-dev-setup/
 
+stow conda
 stow cargo
 stow direnv
 stow git
