@@ -92,4 +92,4 @@ stow bash
 stow zsh
 
 # set up vim
-~/.mconda3/envs/neovim/bin/nvim -c ':PlugUpdate' -c ':qa'
+~/.mconda3/envs/neovim/bin/nvim -c ':PlugUpdate' -c ':MasonInstall rust-analyzer basedpyright'a -c ':qa'
