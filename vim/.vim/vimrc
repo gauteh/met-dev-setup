@@ -709,8 +709,8 @@ if executable('rg')
 endif
 
 cabbrev Gr GrepperRg
-nmap gr  <plug>(GrepperOperator)
-vmap gr  <plug>(GrepperOperator)
+nmap rg  <plug>(GrepperOperator)
+vmap rg  <plug>(GrepperOperator)
 
 " Fuzzy grepping
 command! -bang -nargs=* Rg
