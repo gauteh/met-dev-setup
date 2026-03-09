@@ -50,7 +50,7 @@ copilot --allow-all-tools --version
 sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
 
 # set up dev env
-# sudo chsh -s /usr/bin/zsh gauteh
+sudo chsh -s /usr/bin/zsh gauteh
 
 # set up nvim
 mamba env create -f ~/.vim/environment.yml
