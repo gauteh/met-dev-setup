@@ -91,3 +91,5 @@ stow yazi
 stow bash
 stow zsh
 
+# set up vim
+~/.mconda3/envs/neovim/bin/nvim -c ':PlugUpdate' -c ':qa'
