@@ -53,7 +53,7 @@ sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
 sudo chsh -s /usr/bin/zsh gauteh
 
 # set up nvim
-mamba env create -f ~/.vim/environment.yml -y
+mamba env create -f met-dev-setup/vim/.vim/environment.yml -y
 ln -s ~/.mconda3/envs/neovim/bin/nvim ~/.bin/met-dev/
 
 # cd $HOME
