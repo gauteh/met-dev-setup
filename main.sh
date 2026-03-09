@@ -23,7 +23,7 @@ curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.bin/met-dev -y
 echo "python."
 wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3.sh -b -p "${HOME}/.mconda3"
-source "${HOME}/conda/etc/profile.d/mamba.sh"
+source "${HOME}/.mconda3/etc/profile.d/mamba.sh"
 # mamba shell init
 
 # nvm
