@@ -720,8 +720,8 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
-nmap <leader>rg :Rg<Space>
-nmap <leader>gr :GrepperRg<Space>
+" nmap <leader>rg :Rg<Space>
+nmap <leader>rg :GrepperRg<Space>
 " }}}
 " Nerdtree {{{
 let g:NERDTreeHijackNetrw=1
