@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 
-sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv exa zoxide tig
+sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv zoxide tig
 
 # rust
 echo "rust."
@@ -12,7 +12,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # some rust pcks
 cargo install --force yazi-build
-# cargo install exa
+cargo install exa
 # cargo install zoxide
 
 # starship
@@ -72,6 +72,11 @@ ln -s ~/.mconda3/envs/neovim/bin/nvim ~/.bin/met-dev/
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
+if which stow >/dev/null; then
+	mkdir old
+	mv ~/.bashrc old/ # replaced by stow bash below
+	mv ~/.profile old/
+fi
 
 alias stow='stow -t /home/gauteh'
 cd met-dev-setup/
