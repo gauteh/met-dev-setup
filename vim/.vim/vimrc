@@ -126,6 +126,7 @@ Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'gauteh/lsp-status.nvim'
 Plug 'lewis6991/hover.nvim'
+Plug 'github/copilot.vim'
 
 " Folding and views
 Plug 'zhimsel/vim-stay'
