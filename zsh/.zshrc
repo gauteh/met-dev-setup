@@ -46,7 +46,7 @@ export NVM_AUTO_USE=true
 source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
 
 # Tmux
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOCONNECT=false
 source ~/.zsh/oh-my-zsh/plugins/tmux/tmux.plugin.zsh
 

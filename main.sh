@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 
-sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv zoxide tig
+sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow direnv zoxide tig xclip xsel
 
 # rust
 echo "rust."
