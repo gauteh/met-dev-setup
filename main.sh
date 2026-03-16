@@ -73,24 +73,25 @@ ln -s ~/.mconda3/envs/neovim/bin/nvim ~/.bin/met-dev/
 	&& sudo apt install gh -y
 
 if which stow >/dev/null; then
+	cd ~
 	mkdir old
 	mv ~/.bashrc old/ # replaced by stow bash below
 	mv ~/.profile old/
 fi
 
-alias stow='stow -t /home/gauteh'
-cd met-dev-setup/
+STOWT='stow -t /home/gauteh'
+cd ~/met-dev-setup/
 
-stow conda
-stow cargo
-stow direnv
-stow git
-stow starship
-stow tmux
-stow vim
-stow yazi
-stow bash
-stow zsh
+$STOWT conda
+$STOWT cargo
+$STOWT direnv
+$STOWT git
+$STOWT starship
+$STOWT tmux
+$STOWT vim
+$STOWT yazi
+$STOWT bash
+$STOWT zsh
 
 cd ~
 
