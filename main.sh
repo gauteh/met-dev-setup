@@ -74,7 +74,7 @@ ln -s ~/.mconda3/envs/neovim/bin/nvim ~/.bin/met-dev/
 
 if which stow >/dev/null; then
 	cd ~
-	mkdir old
+	mkdir -p old
 	mv ~/.bashrc old/ # replaced by stow bash below
 	mv ~/.profile old/
 fi
