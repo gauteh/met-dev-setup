@@ -12,6 +12,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # some rust pcks
 cargo install --force yazi-build
+ya pkg install
 cargo install exa
 # cargo install zoxide
 
