@@ -10,6 +10,8 @@ sudo apt-get install -y git build-essential curl zsh wget tmux git ripgrep stow 
 echo "rust."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
+source ~/.cargo/env
+
 # some rust pcks
 cargo install --force yazi-build
 ya pkg install
