@@ -74,7 +74,6 @@ local cmp = require'cmp'
       { name = 'buffer' },
     })
   })
-})
 
 local lspkind = require('lspkind')
 cmp.setup {
