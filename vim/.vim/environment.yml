@@ -10,4 +10,5 @@ dependencies:
   - pygobject
   - neovim
   - nvim
+  - tree-sitter-cli
 

@@ -61,8 +61,6 @@ Plug 'bps/vim-textobj-python', { 'for' : 'python' } " af, if, ac, ic
 Plug 'wellle/targets.vim'
 
 " Browsing and environment
-" Plug 'francoiscabrol/ranger.vim'
-" Plug 'mikavilpas/yazi.nvim'
 Plug 'airblade/vim-rooter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -81,18 +79,14 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Source control
 Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 
 " Languages and filetypes
 Plug 'lervag/vimtex', { 'for' : 'tex' }
 Plug 'peterbjorgensen/sved'
-" Plug 'kaarmu/typst.vim'
 Plug 'jamessan/vim-gnupg'
 Plug 'cespare/vim-toml'
-Plug 'rust-lang/rust.vim'
-Plug 'arzg/vim-rust-syntax-ext'
 Plug 'tpope/vim-ragtag'
 Plug 'jpalardy/vim-slime'
 Plug 'klafyvel/vim-slime-cells'
@@ -103,7 +97,6 @@ Plug 'klafyvel/vim-slime-cells'
 " endif
 
 Plug 'honza/vim-snippets'
-Plug 'janko/vim-test'
 
 " Language servers and completions
 
@@ -114,19 +107,23 @@ let $PATH = node . ':' . $PATH
 " Use nightly rust (e.g. rust-analyzer)
 let $PATH = expand("~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/") . ':' . $PATH
 
+Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'mhartington/formatter.nvim'
-Plug 'neovim/nvim-lspconfig'
+Plug 'SirVer/ultisnips'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+" Plug 'rafamadriz/friendly-snippets'
+Plug 'gauteh/lsp-status.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'saghen/blink.cmp', { 'tag': 'v1.*' }
+
+Plug 'onsails/lspkind.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'SirVer/ultisnips'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'gauteh/lsp-status.nvim'
-Plug 'lewis6991/hover.nvim'
-Plug 'nickjvandyke/opencode.nvim'
+
 
 " Folding and views
 Plug 'zhimsel/vim-stay'
@@ -252,14 +249,14 @@ let g:lightscheme = "tempus_dawn"
 " let g:darkscheme  = "tempus_autumn"
 " let g:darkscheme  = "phd"
 " let g:darkscheme  = "falcon"
-let g:darkscheme = "sonokai"
+" let g:darkscheme = "sonokai"
 " let g:darkscheme = "base16-classic-dark"
 " let g:darkscheme = "base16-decaf"
 " let g:darkscheme = "codedark"
 let g:sonokai_style = 'espresso'
 " let g:darkscheme  = "xoria256"
 " let g:darkscheme  = "base16-espresso"
-" let g:darkscheme  = "catppuccin"
+let g:darkscheme  = "catppuccin"
 " let g:darkscheme  = "base16-chalk"
 
 if has("gui_running")
@@ -309,22 +306,13 @@ function! Sy_stats_wrapper()
   return hunkline
 endfunction
 
-" Statusline
-function! LspStatus() abort
-  if luaeval('#vim.lsp.get_clients({bufnr = 0}) > 0')
-    return luaeval("require('lsp-status').status()")
-  endif
-
-  return ''
-endfunction
-
 augroup Flagship
   au!
   autocmd CmdwinEnter,BufEnter,BufRead,BufWritePost * let b:trailing=search('\s\+$','n')
   autocmd User Flags call Hoist("window", 3, "%{get(b:, 'trailing', 0) ?'[tw]':''}")
   autocmd User Flags call Hoist("buffer", 1, "Sy_stats_wrapper")
 
-  autocmd User Flags call Hoist("buffer", 2, "LspStatus")
+  " autocmd User Flags call Hoist("buffer", 2, "LspStatus")
   " autocmd User Flags call Hoist("tabpage", 2, "")
   autocmd CmdwinEnter,BufEnter,BufRead,BufWritePost * set tabline=
 augroup END
@@ -388,12 +376,12 @@ nnoremap ygF :let @+ = expand("%:p")<CR>
 
 " Remove trailing whitespaces
 nnoremap <silent> <leader>x :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR><Bar>:echo "Removed whitespaces"<CR>
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-autocmd TermOpen * match none
+" highlight ExtraWhitespace ctermbg=red guibg=red
+" autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd BufWinLeave * call clearmatches()
+" autocmd TermOpen * match none
 
 function! RemoveWhiteSpaceOnWrite()
   let cpos = getpos(".")
