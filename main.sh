@@ -99,6 +99,7 @@ $STOWT zsh
 cd ~
 
 # set up vim
+mamba activate neovim
 ~/.mconda3/envs/neovim/bin/nvim -c ':PlugUpdate' -c ':qa'
 ~/.mconda3/envs/neovim/bin/nvim -c ':LspInstall rust-analyzer basedpyright' -c ':qa'
 ~/.mconda3/envs/neovim/bin/nvim -c ':TSInstall rust python' -c ':qa'
