@@ -53,7 +53,7 @@ copilot --allow-all-tools --version
 sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
 
 # set up dev env
-sudo chsh -s /usr/bin/zsh gauteh
+sudo chsh -s /usr/bin/zsh $USER
 
 # set up nvim
 mamba env create -f ~/met-dev-setup/vim/.vim/environment.yml -y
@@ -82,7 +82,7 @@ if which stow >/dev/null; then
 	mv ~/.profile old/
 fi
 
-STOWT='stow -t /home/gauteh'
+STOWT="stow -t /home/$USER"
 cd ~/met-dev-setup/
 
 $STOWT conda
