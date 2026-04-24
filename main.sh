@@ -108,5 +108,7 @@ mamba activate neovim
 mkdir dev
 cd dev
 
+git config --global receive.denyCurrentBranch warn
+
 git clone https://github.com/gauteh/max-m10s-rs.git
 git clone https://github.com/gauteh/sfy.git
