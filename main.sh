@@ -50,7 +50,7 @@ npm install -g @openai/codex
 copilot --allow-all-tools --version
 
 # latex
-sudo apt-get install -y texlive-latex-extra texlive-latex-recommended
+sudo apt-get install -y texlive-latex-extra texlive-latex-recommended latexmk texlive-science
 
 # set up dev env
 sudo chsh -s /usr/bin/zsh $USER
